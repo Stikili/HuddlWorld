@@ -30,7 +30,7 @@
             <button type="submit" class="btn btn-primary">Register</button>
         </form>
     </div>
-    <div class="col-md-6 col-md-offset-2">
+    @*<div class="col-md-6 col-md-offset-2">
         <section>
             <h4>Register via.</h4>
             <hr />
@@ -39,14 +39,14 @@
                 {
                     <div>
                         <p>
-                            @*Please use the correct login credentials to login.*@ 
-                            @*See <a href="https://go.microsoft.com/fwlink/?LinkID=532715">this article</a>*@
+                            Please use the correct login credentials to login. 
+                            See <a href="https://go.microsoft.com/fwlink/?LinkID=532715">this article</a>
                     
                         </p>
                     </div>
                 }
                 else
-                @*{
+                {
                     <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
                         <div>
                             <p>
@@ -57,10 +57,10 @@
                             </p>
                         </div>
                     </form>
-                }*@
+                }
             }
         </section>
-    </div>
+    </div>*@
 </div>
 
 @section Scripts {
