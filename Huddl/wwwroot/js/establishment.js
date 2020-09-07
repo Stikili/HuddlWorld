@@ -7,19 +7,19 @@ $(document).ready(function () {
 function loadDataTable() {
     dataTable = $('#DT_load').DataTable({
         "ajax": {
-            "url": "/api/Establishments",
+            "url": "/api/establishments",
             "type": "GET",
             "datatype": "json"
         },
         "columns": [
-            { "data": "Establishment", "width": "200%" },
-            { "data": "Address", "width": "20%" },
-            { "data": "Team", "width": "20%" },
+            { "data": "establishment", "width": "200%" },
+            { "data": "address", "width": "20%" },
+            { "data": "team", "width": "20%" },
             {
                 "data": "id",
                 "render": function (data) {
                     return `<div class="text-center">
-                        <a href="/Establishments/Edit?id=${data}" class='btn btn-success text-white' style='cursor:pointer; width:70px;'>
+                        <a href="/Establishment/Edit?id=${data}" class='btn btn-success text-white' style='cursor:pointer; width:70px;'>
                             Edit
                         </a>
                         &nbsp;

@@ -2,11 +2,11 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-
+using Microsoft.AspNetCore.Authorization;
 
 namespace Huddl.Controllers
 {
-
+    [Authorize]
     [Route("api/Establishments")]
         [ApiController]
         public class MerchantEstablishmentController : Controller
@@ -16,15 +16,15 @@ namespace Huddl.Controllers
             public MerchantEstablishmentController(ApplicationDbContext db)
             {
                 _db = db;
-            }
-
-            [HttpGet]
+        }
+        [Authorize]
+        [HttpGet]
             public async Task<IActionResult> GetAll()
             {
                 return Json(new { data = await _db.MerchantEstablishment.ToListAsync() });
             }
-
-            [HttpDelete]
+        [Authorize]
+        [HttpDelete]
             public async Task<IActionResult> Delete(int id)
             {
                 var EstablishmentFromDb = await _db.MerchantEstablishment.FirstOrDefaultAsync(u => u.Id == id);

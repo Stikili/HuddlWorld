@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Huddl.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Huddl.Controllers
 {
@@ -48,7 +49,6 @@ namespace Huddl.Controllers
 
             return View();
         }
-
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
