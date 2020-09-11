@@ -1,62 +1,43 @@
 ﻿@page
-@model Huddl.Pages.Establishment.IndexModel
+@model Huddl.Pages.Beverage.IndexModel
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper
-
 
 
 <br />
 <div class="container row p-0 m-0">
     <div class="col-9" style="text-align:center">
-        <h1 class="text-info">Establishments </h1>
+        <h1 class="text-info">Beverage List </h1>
     </div>
 
     <div class="col-3">
-        <a asp-page="Create" class="btn btn-info form-control text-white">Add Establishment</a>
-
+        <a asp-page="Create" class="btn btn-info form-control text-white">Add Beverage</a>
     </div>
 
     <div class="col-12">
         <a asp-controller="Home" asp-action="Index">Home</a>
     </div>
 
-
     <div class="col-12 border p-3 mt-3">
         <form method="post">
-            @if (Model.Establishments.Count() > 0)
+            @if (Model.Beverages.Count() > 0)
             {
                 <table class="table table-striped" border="1">
                     <tr class="table-secondary">
                         <th>
-                            <label asp-for="Establishments.FirstOrDefault().Establishment"></label>
-                        </th>
-
-                        <th>
-                            <label asp-for="Establishments.FirstOrDefault().Address"></label>
-                        </th>
-
-                        <th>
-                            <label asp-for="Establishments.FirstOrDefault().Team"></label>
+                            <label asp-for="Beverages.FirstOrDefault().Beverage"></label>
                         </th>
 
                         <th>
 
                         </th>
                     </tr>
-                    @foreach (var item in Model.Establishments)
+                    @foreach (var item in Model.Beverages)
                     {
                         <tr>
 
                             <td>
-                                @Html.DisplayFor(m => item.Establishment)
-                            </td>
-
-                            <td>
-                                @Html.DisplayFor(m => item.Address)
-                            </td>
-
-                            <td>
-                                @Html.DisplayFor(m => item.Team)
+                                @Html.DisplayFor(m => item.Beverage)
                             </td>
 
                             <td>

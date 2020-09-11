@@ -34,7 +34,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Beverage\" />
+    <Folder Include="Pages\Schedule\" />
   </ItemGroup>
 
 </Project>

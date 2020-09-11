@@ -6,9 +6,9 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Huddl.Controllers
 {
-    [Authorize]
+
     [Route("api/Establishments")]
-        [ApiController]
+    [ApiController]
         public class MerchantEstablishmentController : Controller
         {
             private readonly ApplicationDbContext _db;
@@ -17,7 +17,7 @@ namespace Huddl.Controllers
             {
                 _db = db;
         }
-        [Authorize]
+        //[Authorize]
         [HttpGet]
             public async Task<IActionResult> GetAll()
             {

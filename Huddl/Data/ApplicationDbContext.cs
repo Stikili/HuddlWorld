@@ -8,13 +8,14 @@ namespace Huddl.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
-        {
+        { 
         }
 
         public DbSet<MerchantEstablishment> MerchantEstablishment { get; set; }
-
         public DbSet<Beverages> Beverages { get; set; }
     }
-
-
 }
+
+
+
+
