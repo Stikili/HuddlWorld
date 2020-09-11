@@ -1,0 +1,89 @@
+﻿@page
+@model Huddl.Pages.Schedule.IndexModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper
+
+
+<br />
+<div class="container row p-0 m-0">
+    <div class="col-9" style="text-align:center">
+        <h1 class="text-info">Fixture Schedule </h1>
+    </div>
+
+  <div class="col-12">
+        <a asp-controller="Home" asp-action="Index">Back Home</a>
+    </div>
+
+
+    <div class="col-12 border p-3 mt-3">
+        <form method="post">
+            @if (Model.FixtureSchedule.Count() > 0)
+            {
+                <table class="table table-striped" border="1">
+                    <tr class="table-secondary">
+                        <th>
+                            <label asp-for="FixtureSchedule.FirstOrDefault().Date"></label>
+                        </th>
+
+                        <th>
+                            <label asp-for="FixtureSchedule.FirstOrDefault().Fixture"></label>
+                        </th>
+
+                        <th>
+                            <label asp-for="FixtureSchedule.FirstOrDefault().Sport"></label>
+                        </th>
+
+                        <th>
+                            <label asp-for="FixtureSchedule.FirstOrDefault().League"></label>
+                        </th>
+
+                        <th>
+
+                        </th>
+                    </tr>
+                    @foreach (var item in Model.FixtureSchedule)
+                    {
+                <tr>
+
+                    <td>
+                        @Html.DisplayFor(m => item.Date)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(m => item.Fixture)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(m => item.Sport)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(m => item.League)
+                    </td>
+
+
+
+                    @*<td>
+            <button asp-page-handler="Delete" asp-route-id="@item.Id" onclick="return confirm('Are you sure you want to delete?')" class="btn btn-danger btn-sm">Delete</button>
+            <a asp-page="Edit" asp-route-id="@item.Id" class="btn btn-success btn-sm text-white">Edit</a>
+        </td>*@
+                </tr>
+                    }
+
+                </table> }
+            else
+            {
+                <p>No Fixtures Scheduled.</p>}
+        </form>
+    </div>
+
+
+</div>
+@section Scripts{
+    <script src="~/js/establishment.js"></script>
+}
+
+
+
+
+
