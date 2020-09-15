@@ -1,24 +1,23 @@
 ﻿@inject SignInManager<IdentityUser> signInManager;
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=10.0" />
     <title>@ViewData["Title"] - Huddl</title>
-    @*<link rel="stylesheet" href="~/theme/css/black-dashboard.min.css" />
-    <link rel="stylesheet" href="~/theme/demo/demo.css" />*@
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/assets/css/black-dashboard.min.css" />
+    <link rel="stylesheet" href="~/assets/demo/demo.css" />
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>*@
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Huddl</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -29,34 +28,32 @@
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
                         @*<li class="nav-item">
-        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                        <li class="nav-item">*@
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                                            <li class="nav-item">*@
                         @*<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">About</a>
-        </li>
-
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Contact Us</a>
-        </li>*@
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Contact Us</a>
+                            </li>*@
 
                         @*<li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Services">Services</a>
-        </li>
-
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </li>*@
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Services">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            </li>*@
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Establishment/Index">Establishments</a>
+                            <a class="nav-link text-white" asp-area="" asp-page="/Establishment/Index">Establishments</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Beverage/Index">Beverages</a>
+                            <a class="nav-link text-white" asp-area="" asp-page="/Beverage/Index">Beverages</a>
                         </li>
 
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Schedule/Index">Schedule</a>
+                            <a class="nav-link text-white" asp-area="" asp-page="/Schedule/Index">Schedule</a>
                         </li>
                     </ul>
                 </div>

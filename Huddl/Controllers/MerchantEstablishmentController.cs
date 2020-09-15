@@ -9,7 +9,8 @@ namespace Huddl.Controllers
 
     [Route("api/Establishments")]
     [ApiController]
-        public class MerchantEstablishmentController : Controller
+    [ValidateAntiForgeryToken]
+    public class MerchantEstablishmentController : Controller
         {
             private readonly ApplicationDbContext _db;
 
@@ -25,7 +26,8 @@ namespace Huddl.Controllers
             }
         [Authorize]
         [HttpDelete]
-            public async Task<IActionResult> Delete(int id)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(int id)
             {
                 var EstablishmentFromDb = await _db.MerchantEstablishment.FirstOrDefaultAsync(u => u.Id == id);
                 if (EstablishmentFromDb == null)

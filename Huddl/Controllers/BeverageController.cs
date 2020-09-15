@@ -21,6 +21,7 @@ namespace Huddl.Controllers
 
         [Authorize]
         [HttpGet]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> GetAll()
         {
             return Json(new { data = await _db.Beverages.ToListAsync() });
@@ -28,6 +29,7 @@ namespace Huddl.Controllers
 
         [Authorize]
         [HttpDelete]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id)
         {
             var BeveragesFromDb = await _db.Beverages.FirstOrDefaultAsync(u => u.Id == id);

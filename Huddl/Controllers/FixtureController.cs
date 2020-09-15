@@ -19,6 +19,7 @@ namespace Huddl.Controllers
 
         //[Authorize]
         [HttpGet]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> GetAll()
         {
             return Json(new { data = await _db.FixtureSchedule.ToListAsync() });
