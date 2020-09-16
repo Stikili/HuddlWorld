@@ -21,10 +21,13 @@ namespace Huddl
             Host.CreateDefaultBuilder(args)
 .ConfigureAppConfiguration((context, config) =>
 {
-var keyVaultEndpoint = new Uri(Environment.GetEnvironmentVariable("VaultUri"));
-config.AddAzureKeyVault(
-keyVaultEndpoint,
-new DefaultAzureCredential());
+    config.AddJsonFile("Production.json",
+    optional: true,
+    reloadOnChange: true);
+//    var keyVaultEndpoint = new Uri(Environment.GetEnvironmentVariable("VaultUri"));
+//config.AddAzureKeyVault(
+//keyVaultEndpoint,
+//new DefaultAzureCredential());
 })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
