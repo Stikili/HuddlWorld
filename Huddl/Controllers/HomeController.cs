@@ -25,31 +25,32 @@ namespace Huddl.Controllers
             return View();
         }
 
-        //public IActionResult Privacy()
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        //public IActionResult About()
         //{
+        //    ViewData["Message"] = "Your application description page.";
+
         //    return View();
         //}
 
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
+        //public IActionResult Contact()
+        //{
+        //    ViewData["Message"] = "Your contact page.";
 
-            return View();
-        }
+        //    return View();
+        //}
 
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
+        //public IActionResult Services()
+        //{
+        //    ViewData["Message"] = "Your services page.";
 
-            return View();
-        }
+        //    return View();
+        //}
 
-        public IActionResult Services()
-        {
-            ViewData["Message"] = "Your services page.";
-
-            return View();
-        }
 
 
         //[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -21,11 +21,14 @@ namespace Huddl.Pages.Beverage
             _db = db;
         }
 
+        [BindProperty]
+
         public IEnumerable<Beverages> Beverages { get; set; }
 
         public async Task OnGet()
         {
-            Beverages = await _db.Beverages.ToListAsync();
+            Beverages = await _db.Beverages.ToListAsync();         
+
         }
 
         public async Task<IActionResult> OnPostDelete(int id)

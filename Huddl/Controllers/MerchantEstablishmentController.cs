@@ -18,12 +18,15 @@ namespace Huddl.Controllers
             {
                 _db = db;
         }
+
+
         //[Authorize]
         [HttpGet]
-            public async Task<IActionResult> GetAll()
-            {
-                return Json(new { data = await _db.MerchantEstablishment.ToListAsync() });
-            }
+        public async Task<IActionResult> Establishments()
+        {
+            return Json(new { data = await _db.MerchantEstablishment.ToListAsync() });
+        }
+
         [Authorize]
         [HttpDelete]
         [ValidateAntiForgeryToken]
