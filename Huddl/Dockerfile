@@ -8,25 +8,25 @@
 #EXPOSE 80
 #EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1-nanoserver-1903 AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 WORKDIR /src
 
 COPY *.sln .
-COPY ["Huddl/Huddl.csproj", "Huddl/"]
-RUN dotnet restore "Huddl/Huddl.csproj"
+COPY Huddl/Huddl.csproj  ./Huddl/
+RUN dotnet restore
 
 
 #COPY . .
 COPY Huddl/. ./Huddl/
 WORKDIR "/src/Huddl"
-RUN dotnet publish "Huddl.csproj" -c Release -o /app/build --no-restore
+RUN dotnet publish  -c Release -o /app/build --no-restore
 
 
 #FROM mcr.microsoft.com/dotnet/core/sdk:3.1-nanoserver-1903
 #FROM build AS publish
 #RUN dotnet publish "Huddl.csproj" -c Release -o /app/publish
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1-nanoserver-1903
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1
 WORKDIR /app
 COPY --from=build /app ./
 EXPOSE 80
