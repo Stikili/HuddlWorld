@@ -9,10 +9,6 @@
     <title>@ViewData["Title"] - Huddl</title>
     <link rel="stylesheet" href="~/assets/css/black-dashboard.min.css" />
     <link rel="stylesheet" href="~/assets/demo/demo.css" />
-    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/modernizr-2.6.2.js"></script>*@
 </head>
 
 <body>
@@ -27,31 +23,15 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
-                        @*<li class="nav-item">
-        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                        <li class="nav-item">*@
-                        @*<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">About</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Contact Us</a>
-        </li>*@
-
-                        @*<li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Services">Services</a>
-        </li>*@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                                                
+                        </li>                                                
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-page="/Establishment/Index">Establishments</a>
                         </li>
-
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-page="/Beverage/Index">Beverages</a>
                         </li>
-
-
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-page="/Schedule/Index">Schedule</a>
                         </li>
@@ -79,7 +59,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
 
     @RenderSection("Scripts", required: false)
 </body>

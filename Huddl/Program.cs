@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Azure.Identity;
 
 namespace Huddl
 {
@@ -24,10 +23,6 @@ namespace Huddl
     config.AddJsonFile("Production.json",
     optional: true,
     reloadOnChange: true);
-//    var keyVaultEndpoint = new Uri(Environment.GetEnvironmentVariable("VaultUri"));
-//config.AddAzureKeyVault(
-//keyVaultEndpoint,
-//new DefaultAzureCredential());
 })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {

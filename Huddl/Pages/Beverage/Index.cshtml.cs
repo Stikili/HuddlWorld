@@ -21,7 +21,7 @@ namespace Huddl.Pages.Beverage
             _db = db;
         }
 
-        [BindProperty]
+        //[BindProperty]
 
         public IEnumerable<Beverages> Beverages { get; set; }
 

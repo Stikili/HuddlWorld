@@ -38,13 +38,6 @@ namespace Huddl
             services.AddRazorPages();
             services.AddControllersWithViews();
             services.AddRazorPages().AddRazorRuntimeCompilation();
-            services.AddApplicationInsightsTelemetry(Configuration["APPINSIGHTS_INSTRUMENTATIONKEY"]);
-
-            //services.AddAuthentication().AddFacebook(facebookOptions =>
-            //{
-            //    facebookOptions.AppId = Configuration["Authentication:Facebook:AppId"];
-            //    facebookOptions.AppSecret = Configuration["Authentication:Facebook:AppSecret"];
-            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
